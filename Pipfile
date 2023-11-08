@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+sqlalchemy-libsql = "*"
+sqlalchemy = "*"
+aiosqlite = "*"
+flask-wtf = "*"
+quart-flask-patch = "*"
+quart = "*"
+starlette-wtf = "*"
+quart-auth = "*"
+celery = "==4.4.2"
+asgiref = "*"
+aioprometheus = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

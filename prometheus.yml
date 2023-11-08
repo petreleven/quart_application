@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+  external_labels:
+    monitor: "quart-monitor"
+scrape_configs:
+  - job_name: "prometheus"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["192.168.100.37:5000"]
+        labels:
+          group: "quart"

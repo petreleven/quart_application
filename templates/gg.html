@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% block content %}
+<form method="POST">
+   <div class="mb-4">
+      <label for="name" class="block text-gray-700 font-bold">Name</label>
+      <input
+         type="text"
+         id="name"
+         name="name"
+         class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+         required />
+   </div>
+
+   <div class="mb-4">
+      <label for="email" class="block text-gray-700 font-bold">Email</label>
+      <input
+         type="email"
+         id="email"
+         name="email"
+         class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+         required />
+   </div>
+
+   <div class="mb-4">
+      <label for="reddit_token_id" class="block text-gray-700 font-bold"
+         >Slack ID</label
+      >
+      <input
+         type="text"
+         id="reddit_token_id"
+         name="reddit_token_id"
+         class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" />
+   </div>
+
+   <div class="mt-6">
+      <input type="hidden" name="csrf_token" value="" />
+      <button
+         type="submit"
+         hx-post="/create_user"
+         hx-target="closest form"
+         hx-swap="outerHTML"
+         hx-push-url="true"
+         class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
+         Submit
+      </button>
+   </div>
+</form>
+{% endblock %}
