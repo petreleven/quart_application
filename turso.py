@@ -8,7 +8,10 @@ from contextlib import asynccontextmanager
 import libsql_client
 import asyncio
 
-
+""" THIS IS SCRIPT IS AN ATTEMPT TO USE TURSO DATABASE AND  
+    HAS SOME BUGS USE THE APP USES the file models.py instead 
+    TO CRETA A LOCAL SQLITE DATABASE
+"""
 class Base(DeclarativeBase):
     pass
 
@@ -53,7 +56,7 @@ class UserDAL:
             return {"Users": None}
 
 
-auth_token = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIyMDIzLTExLTAzVDE3OjE3OjE0LjE4OTk0MjU2NVoiLCJpZCI6ImE0YjQzMDA5LTc5YmEtMTFlZS1iNzEyLTdhZWJhMmI3ZmVhYiJ9.pEpciQqyIYga3AT7ojGPbRM8GcpujVwznUvVj_mvIkGrUnjLvGCXuCH_9lyNOGf8SI1Xenqoxc8p-BerEIeXBw"
+auth_token = ""
 url = "strong-bushwacker-petreleven.turso.io"
 
 
