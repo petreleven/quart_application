@@ -1,4 +1,4 @@
-# quart_application
+# An asynchronous python quart_application
 # Quart_monolith_app
 A quart application to fetch data from reddit with OAuth2 permissions. Uses celery for background tasks and Prometheus for monitoring health.<br/>
 The code be easily extended to serve several use cases eg a reddit post schduling site;<br/>
